@@ -29,7 +29,7 @@ const RecordsPage = () => {
   const fetchRecords = async () => {
     setLoading(true);
     try {
-      const response = await axios.get(`http://localhost:3000/route53/zones/hostedzone/${zoneId}/records`);
+      const response = await axios.get(`https://dns-manager-8sdm.onrender.com/route53/zones/hostedzone/${zoneId}/records`);
       const data = response.data;
       setRecords(data);
       setFilteredRecords(data);
